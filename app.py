@@ -14,8 +14,8 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "miron"
-
 api = Api(app)
+db.init_app(app)
 
 @app.before_first_request
 def create_tables():
@@ -53,7 +53,6 @@ api.add_resource(UserRegister, "/register")
 
 
 if __name__ == "__main__":
-    db.init_app(app)
     app.run(port=5000, debug=True)
 
 
