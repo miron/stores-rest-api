@@ -4,6 +4,7 @@ from flask import Flask, jsonify
 from flask_restful import Api
 from flask_jwt import JWT
 from db import db
+os.environ["DB_URL"] = "postgresql://streetyogi:<pwd>@localhost:5432/streetyogi"
 
 from security import authenticate, identity as identity_function
 from resources.user import UserRegister

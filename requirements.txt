@@ -2,5 +2,5 @@ Flask
 Flask-RESTful
 Flask-JWT
 Flask-SQLAlchemy
-uwsgi
-psycopg2
+pyuwsgi # no ssl, reverse proxy has to provide
+psycopg2-binary
