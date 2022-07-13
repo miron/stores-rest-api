@@ -14,7 +14,6 @@ sudo -i -u postgres
 createuser streetyogi # same as in Linux  
 createdb streetyogi  
 su streetyogi  
-cd code  
 python3.9 -m venv env   
 source env/bin/activate  
 pip install -r requirements  
